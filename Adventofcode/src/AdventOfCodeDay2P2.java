@@ -1,11 +1,12 @@
 import java.util.Scanner;
 
-public class AdventOfCodeDay2 {
+public class AdventOfCodeDay2P2 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		int verticalValues = 0;
 		int horizontalValues = 0;
+		int aim = 0;
 		String[] valuesList = { "forward 3", "down 6", "forward 7", "down 4", "down 8", "down 6", "down 4", "down 6",
 				"forward 7", "down 5", "forward 1", "up 7", "up 6", "down 1", "down 2", "forward 3", "forward 3",
 				"forward 4", "up 9", "up 4", "forward 9", "down 2", "down 6", "forward 1", "forward 8", "down 2",
@@ -116,25 +117,24 @@ public class AdventOfCodeDay2 {
 				"forward 4", "up 5", "forward 1", "up 4", "down 1", "forward 2" };
 		for (int i = 0; i < valuesList.length; i++) {
 			String value = valuesList[i];
-			System.out.println("this is the value: " + value);
 			int valueLength = value.length();
 			if (valueLength == 4) {
 				char amount = value.charAt(3);
 				int intAmount = Integer.parseInt(String.valueOf(amount));
-				System.out.println("This is the amount: " + amount);
-				System.out.println("This is the intAmount: " + intAmount);
-				verticalValues = verticalValues - intAmount;
+				System.out.println("This is the up intAmount: " + intAmount);
+				aim = aim - intAmount;
+				System.out.println("You are now aiming at " + aim + " degrees");
 			} else if (valueLength == 6) {
 				char amount = value.charAt(5);
 				int intAmount = Integer.parseInt(String.valueOf(amount));
-				System.out.println("This is the amount: " + amount);
-				System.out.println("This is the intAmount: " + intAmount);
-				verticalValues = verticalValues + intAmount;
+				System.out.println("This is the down intAmount: " + intAmount);
+				aim = aim + intAmount;
+				System.out.println("You are now aiming at " + aim + " degrees");
 			} else if (valueLength == 9) {
 				char amount = value.charAt(8);
 				int intAmount = Integer.parseInt(String.valueOf(amount));
-				System.out.println("This is the amount: " + amount);
-				System.out.println("This is the intAmount: " + intAmount);
+				System.out.println("This is the forward intAmount: " + intAmount);
+				verticalValues = verticalValues + (aim * intAmount);
 				horizontalValues = horizontalValues + intAmount;
 			}
 			System.out.println("This is the value vertical value: " + verticalValues);
