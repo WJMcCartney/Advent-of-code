@@ -1,10 +1,35 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AdventOfCodeDay3P2 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		int insertVar = 0;
+		int insertVariable1 = 0;
+		int insertVariable2 = 0;
+		int insertVariable3 = 0;
+		int insertVariable4 = 0;
+		int insertVariable5 = 0;
+		int insertVariable6 = 0;
+		int insertVariable7 = 0;
+		int insertVariable8 = 0;
+		int insertVariable9 = 0;
+		int insertVariable10 = 0;
+		int insertVariable11 = 0;
+		int insertVariable12 = 0;
+
+		ArrayList<String> valuesList2 = new ArrayList<String>();
+		ArrayList<String> valuesList3 = new ArrayList<String>();
+		ArrayList<String> valuesList4 = new ArrayList<String>();
+		ArrayList<String> valuesList5 = new ArrayList<String>();
+		ArrayList<String> valuesList6 = new ArrayList<String>();
+		ArrayList<String> valuesList7 = new ArrayList<String>();
+		ArrayList<String> valuesList8 = new ArrayList<String>();
+		ArrayList<String> valuesList9 = new ArrayList<String>();
+		ArrayList<String> valuesList10 = new ArrayList<String>();
+		ArrayList<String> valuesList11 = new ArrayList<String>();
+		ArrayList<String> valuesList12 = new ArrayList<String>();
+
 		String[] valuesList1 = { "110001010110", "011101111101", "111011110101", "011110101000", "100100011001",
 				"011001001110", "101011000101", "110000111111", "110110101000", "010101101000", "001101001101",
 				"111000001011", "111000011010", "001111001000", "100110001111", "111100110100", "100000010101",
@@ -134,37 +159,219 @@ public class AdventOfCodeDay3P2 {
 				"011110000010", "110011110100", "100001000001", "100000011110", "001101100101", "101111101101",
 				"110010010100", "010111101110", "010101110111", "101010101000", "000100000010", "111000001010",
 				"101100001100", "101010000001" };
-		for (int i = 0; i < valuesList1.length; i++) {
-			String value1 = valuesList1[i];
+		for (int countingVariable1 = 0; countingVariable1 < valuesList1.length; countingVariable1++) {
+			String value1 = valuesList1[countingVariable1];
 			char digit1 = value1.charAt(0);
 			int intDigit1 = Integer.parseInt(String.valueOf(digit1));
 			if (intDigit1 == 1) {
-				String valuesList2[] = { value1 };
-				System.out.println(valuesList2.length);
-				for (int ii = 0; ii < valuesList2.length; ii++) {
-					String value2 = valuesList2[ii];
-					char digit2 = value2.charAt(1);
-					int intDigit2 = Integer.parseInt(String.valueOf(digit2));
-					if (intDigit2 == 1) {
-						String valuesList3[] = { value2 };
-						for (int iii = 0; iii < valuesList3.length; iii++) {
-							String value3 = valuesList3[iii];
-							char digit3 = value2.charAt(2);
-							int intDigit3 = Integer.parseInt(String.valueOf(digit3));
-							if (intDigit3 == 1) {
-								insertVar = insertVar + 1;
-							} else {
-								insertVar = insertVar - 1;
-							}
-							// System.out.println(insertVar);
-							// System.out.println(valuesList3.length);
-							// System.out.print(valuesList3);
-						}
-					}
-
-					input.close();
+				insertVariable1 = insertVariable1 + 1;
+			} else {
+				insertVariable1 = insertVariable1 - 1;
+			}
+				if (intDigit1 == 0) {
+					valuesList2.add(value1);
 				}
+
+
+		}
+		System.out.println("insert variable 1 is " + insertVariable1);
+		System.out.println(valuesList2);
+		System.out.println(valuesList2.size());
+
+		for (int countingVariable2 = 0; countingVariable2 < valuesList2.size(); countingVariable2++) {
+			String value2 = valuesList2.get(countingVariable2);
+			char digit2 = value2.charAt(1);
+			int intDigit2 = Integer.parseInt(String.valueOf(digit2));
+			if (intDigit2 == 1) {
+				insertVariable2 = insertVariable2 + 1;
+			} else {
+				insertVariable2 = insertVariable2 - 1;
+			}
+
+				if (intDigit2 == 0) {
+					valuesList3.add(value2);
+				}
+
+
+		}
+		System.out.println("insert variable 2 is " + insertVariable2);
+		System.out.println(valuesList3);
+		System.out.println(valuesList3.size());
+
+		for (int countingVariable3 = 0; countingVariable3 < valuesList3.size(); countingVariable3++) {
+			String value3 = valuesList3.get(countingVariable3);
+			char digit3 = value3.charAt(2);
+			int intDigit3 = Integer.parseInt(String.valueOf(digit3));
+			if (intDigit3 == 1) {
+				insertVariable3 = insertVariable3 + 1;
+			} else {
+				insertVariable3 = insertVariable3 - 1;
+			}
+			if (intDigit3 == 1) {
+				valuesList4.add(value3);
 			}
 		}
+
+		System.out.println("insert variable 3 " + insertVariable3);
+		System.out.println(valuesList4);
+		System.out.println(valuesList4.size());
+
+		for (int countingVariable4 = 0; countingVariable4 < valuesList4.size(); countingVariable4++) {
+			String value4 = valuesList4.get(countingVariable4);
+			char digit4 = value4.charAt(3);
+			int intDigit4 = Integer.parseInt(String.valueOf(digit4));
+			if (intDigit4 == 1) {
+				insertVariable4 = insertVariable4 + 1;
+			} else {
+				insertVariable4 = insertVariable4 - 1;
+			}
+			if (intDigit4 == 1) {
+				valuesList5.add(value4);
+			}
+
+		}
+
+		System.out.println("insert variable 4 " + insertVariable4);
+		System.out.println(valuesList5);
+		System.out.println(valuesList5.size());
+
+		for (int countingVariable5 = 0; countingVariable5 < valuesList5.size(); countingVariable5++) {
+			String value5 = valuesList5.get(countingVariable5);
+			char digit5 = value5.charAt(4);
+			int intDigit5 = Integer.parseInt(String.valueOf(digit5));
+			if (intDigit5 == 1) {
+				insertVariable5 = insertVariable5 + 1;
+			} else {
+				insertVariable5 = insertVariable5 - 1;
+			}
+			if (intDigit5 == 1) {
+				valuesList6.add(value5);
+			}
+		}
+
+		System.out.println("insert variable 5 " + insertVariable5);
+		System.out.println(valuesList6);
+		System.out.println(valuesList6.size());
+
+		for (int countingVariable6 = 0; countingVariable6 < valuesList6.size(); countingVariable6++) {
+			String value6 = valuesList6.get(countingVariable6);
+			char digit6 = value6.charAt(5);
+			int intDigit6 = Integer.parseInt(String.valueOf(digit6));
+			if (intDigit6 == 1) {
+				insertVariable6 = insertVariable6 + 1;
+			} else {
+				insertVariable6 = insertVariable6 - 1;
+			}
+
+			if (intDigit6 == 1) {
+				valuesList7.add(value6);
+			}
+
+		}
+		System.out.println("insert variable 6 " + insertVariable6);
+		System.out.println(valuesList7);
+		System.out.println(valuesList7.size());
+
+		for (int countingVariable7 = 0; countingVariable7 < valuesList7.size(); countingVariable7++) {
+			String value7 = valuesList7.get(countingVariable7);
+			char digit7 = value7.charAt(6);
+			int intDigit7 = Integer.parseInt(String.valueOf(digit7));
+			if (intDigit7 == 1) {
+				insertVariable7 = insertVariable7 + 1;
+			} else {
+				insertVariable7 = insertVariable7 - 1;
+			}
+			if (intDigit7 == 0) {
+				valuesList8.add(value7);
+			}
+
+		}
+		System.out.println("insert variable 7 " + insertVariable7);
+		System.out.println(valuesList8);
+		System.out.println(valuesList8.size());
+
+		for (int countingVariable8 = 0; countingVariable8 < valuesList8.size(); countingVariable8++) {
+			String value8 = valuesList8.get(countingVariable8);
+			char digit8 = value8.charAt(7);
+			int intDigit8 = Integer.parseInt(String.valueOf(digit8));
+			if (intDigit8 == 1) {
+				insertVariable8 = insertVariable8 + 1;
+			} else {
+				insertVariable8 = insertVariable8 - 1;
+			}
+
+			if (intDigit8 == 0) {
+				valuesList9.add(value8);
+			}
+
+		}
+		System.out.println("insert variable 8 " + insertVariable8);
+		System.out.println(valuesList9);
+		System.out.println(valuesList9.size());
+
+		for (int countingVariable9 = 0; countingVariable9 < valuesList9.size(); countingVariable9++) {
+			String value9 = valuesList9.get(countingVariable9);
+			char digit9 = value9.charAt(8);
+			int intDigit9 = Integer.parseInt(String.valueOf(digit9));
+			if (intDigit9 == 1) {
+				insertVariable9 = insertVariable9 + 1;
+			} else {
+				insertVariable9 = insertVariable9 - 1;
+			}
+				if (intDigit9 == 0) {
+					valuesList10.add(value9);
+				}
+
+		}
+		System.out.println("insert variable 9 " + insertVariable9);
+		System.out.println(valuesList10);
+		System.out.println(valuesList10.size());
+
+		for (int countingVariable10 = 0; countingVariable10 < valuesList10.size(); countingVariable10++) {
+			String value10 = valuesList10.get(countingVariable10);
+			char digit10 = value10.charAt(9);
+			int intDigit10 = Integer.parseInt(String.valueOf(digit10));
+			if (intDigit10 == 1) {
+				insertVariable10 = insertVariable10 + 1;
+			} else {
+				insertVariable10 = insertVariable10 - 1;
+			}
+				if (intDigit10 == 1) {
+					valuesList11.add(value10);
+				}
+
+		}
+		System.out.println("insert variable 10 " + insertVariable10);
+		System.out.println(valuesList11);
+		System.out.println(valuesList11.size());
+
+		for (int countingVariable11 = 0; countingVariable11 < valuesList11.size(); countingVariable11++) {
+			String value11 = valuesList11.get(countingVariable11);
+			char digit11 = value11.charAt(10);
+			int intDigit11 = Integer.parseInt(String.valueOf(digit11));
+			if (intDigit11 == 1) {
+				insertVariable11 = insertVariable11 + 1;
+			} else {
+				insertVariable11 = insertVariable11 - 1;
+			}
+
+				if (intDigit11 == 1) {
+					valuesList12.add(value11);
+				}
+
+		}
+		System.out.println("insert variable 11 " + insertVariable11);
+		System.out.println(valuesList12);
+		System.out.println(valuesList12.size());
+		String CO2String = valuesList8.get(0);
+		System.out.println(CO2String);
+		int CO2Rating = Integer.parseInt(CO2String, 2);
+		System.out.println(CO2Rating);
+		
+		// advent of code day3p2Testing has the Oxygen rating which is 3438
+		
+		int lifeSupportRating = 3438 * CO2Rating;
+		System.out.println(lifeSupportRating);
 	}
+
 }

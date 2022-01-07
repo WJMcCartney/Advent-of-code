@@ -1,10 +1,35 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AdventOfCodeDay3P2Testing {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		int insertVars = 0;
+		int insertVariable1 = 0;
+		int insertVariable2 = 0;
+		int insertVariable3 = 0;
+		int insertVariable4 = 0;
+		int insertVariable5 = 0;
+		int insertVariable6 = 0;
+		int insertVariable7 = 0;
+		int insertVariable8 = 0;
+		int insertVariable9 = 0;
+		int insertVariable10 = 0;
+		int insertVariable11 = 0;
+		int insertVariable12 = 0;
+
+		ArrayList<String> valuesList2 = new ArrayList<String>();
+		ArrayList<String> valuesList3 = new ArrayList<String>();
+		ArrayList<String> valuesList4 = new ArrayList<String>();
+		ArrayList<String> valuesList5 = new ArrayList<String>();
+		ArrayList<String> valuesList6 = new ArrayList<String>();
+		ArrayList<String> valuesList7 = new ArrayList<String>();
+		ArrayList<String> valuesList8 = new ArrayList<String>();
+		ArrayList<String> valuesList9 = new ArrayList<String>();
+		ArrayList<String> valuesList10 = new ArrayList<String>();
+		ArrayList<String> valuesList11 = new ArrayList<String>();
+		ArrayList<String> valuesList12 = new ArrayList<String>();
+
 		String[] valuesList1 = { "110001010110", "011101111101", "111011110101", "011110101000", "100100011001",
 				"011001001110", "101011000101", "110000111111", "110110101000", "010101101000", "001101001101",
 				"111000001011", "111000011010", "001111001000", "100110001111", "111100110100", "100000010101",
@@ -134,104 +159,221 @@ public class AdventOfCodeDay3P2Testing {
 				"011110000010", "110011110100", "100001000001", "100000011110", "001101100101", "101111101101",
 				"110010010100", "010111101110", "010101110111", "101010101000", "000100000010", "111000001010",
 				"101100001100", "101010000001" };
-		for (int i = 0; i < valuesList1.length; i++) {
-			String value1 = valuesList1[i];
+		for (int countingVariable1 = 0; countingVariable1 < valuesList1.length; countingVariable1++) {
+			String value1 = valuesList1[countingVariable1];
 			char digit1 = value1.charAt(0);
 			int intDigit1 = Integer.parseInt(String.valueOf(digit1));
-		}
-		String valuesList2[] = { "110001010110", "111011110101", "100100011001", "101011000101", "110000111111",
-				"110110101000", "111000001011", "111000011010", "100110001111", "111100110100", "100000010101",
-				"100111110110", "100110000110", "111100101101", "100101010100", "111010110000", "110100011110",
-				"111010101100", "111001001101", "110001110100", "100110111011", "101111111011", "111001011011",
-				"110100111000", "111000011001", "100000101111", "110001101000", "100100000001", "101000111011",
-				"101110001111", "100110101110", "111011101010", "110100001111", "101000011100", "111101111101",
-				"110101010100", "101100111111", "111110110101", "101101000111", "111101000011", "110011110111",
-				"100001101010", "111011101101", "110101111100", "110010101000", "111100001010", "100110111010",
-				"111011111000", "111011011111", "100111000100", "101111101011", "100110101011", "110011000001",
-				"110100111110", "110011000101", "110010111110", "100000110000", "100011100101", "101000000101",
-				"110101110011", "101110110010", "110101101101", "111011110100", "110110101111", "100000010000",
-				"111001001111", "101011000111", "111100100011", "110100110110", "111111110010", "110101111101",
-				"100010010101", "111101110001", "111110100011", "101001111100", "100110111110", "100010110110",
-				"100010001000", "111110011110", "110011111000", "100011101110", "101110101010", "110111010111",
-				"110011000100", "100110101100", "101110100110", "100111100010", "101001101001", "110111100010",
-				"110100110100", "111110111001", "111100110111", "100010011101", "111000110010", "101111000010",
-				"110011011100", "110110011110", "100100110000", "110000100011", "110000100010", "111111000001",
-				"101111011100", "100100100101", "101010100110", "101000110010", "110001011011", "111110011111",
-				"111100100110", "111110101000", "111000101111", "111001010110", "101000001111", "111101111100",
-				"100101010110", "101110011100", "111100101010", "111011111101", "111100110010", "110011101111",
-				"111100001110", "111110110000", "110010111111", "101110100010", "100100111000", "111101011010",
-				"110010101101", "110011101100", "110111111111", "111000011000", "110101101011", "101010101001",
-				"100111001101", "111011000001", "101101111010", "111001111001", "100011010111", "111011011101",
-				"100010100001", "111100010001", "101001101101", "111101100111", "100110100010", "101100000101",
-				"111011010110", "101101101101", "110011011111", "100100001100", "101010011101", "100000110110",
-				"110101010000", "110110110111", "101001110110", "100001000101", "110100001001", "101000101001",
-				"111111001100", "101011000100", "111000010100", "100111000110", "111011010100", "101101011101",
-				"100111101111", "110111011111", "111010011010", "101000001110", "101001110001", "110111010010",
-				"110001001001", "100000111011", "111000010101", "100010011111", "100011000100", "110110011001",
-				"111000111010", "111010000111", "111011110110", "101101100111", "111100101001", "110001101110",
-				"111101100001", "110110101001", "101011111111", "100110001000", "101000100000", "110101110010",
-				"101011110000", "101001100001", "111010101101", "110100111001", "110100011010", "111011001100",
-				"101111001101", "100010000001", "101010000011", "110110010100", "101001011101", "100001010001",
-				"110011010101", "100101000101", "110110100110", "110001111010", "111011101011", "111111101100",
-				"100011111010", "101000010101", "111001111010", "100000000100", "110000001000", "100100001101",
-				"110111110111", "101110011110", "110010000010", "101100001101", "101110011001", "111000000110",
-				"100011110100", "101000011111", "110001011010", "100001111011", "110100010011", "100000001100",
-				"100111101010", "100010100000", "110000110001", "110101000001", "100010010110", "110011101011",
-				"111110011101", "110010110011", "110000010110", "111011011011", "111110000000", "101100111010",
-				"100110011111", "110111011001", "110110010010", "101110000000", "100110100011", "111101111010",
-				"110101010011", "111110100010", "100110001100", "101010100001", "111001011100", "100100111110",
-				"110011111101", "100001111111", "110001011001", "111111100011", "111101110000", "100011001101",
-				"110001010100", "100110000111", "111110110110", "111111000000", "101011101101", "110001111011",
-				"110101100101", "111110111101", "110010010011", "110001110111", "111010010011", "100010001110",
-				"110000101000", "101011110011", "110100000101", "100110000000", "110101110101", "111101010100",
-				"111011011100", "110010110001", "100000011010", "101110101011", "110010011001", "111110001110",
-				"110000101010", "100101101110", "100010111010", "110101100001", "101111000100", "101000111001",
-				"111100111110", "110100110010", "111010111011", "100101000100", "111010100100", "111101101100",
-				"111110001111", "110100011011", "111100010101", "111001111100", "110101010110", "101100001000",
-				"111101101010", "100111000111", "110101011100", "110000110101", "101110010001", "100100110010",
-				"101111110000", "100001010100", "101110110110", "110111001101", "101011001111", "111111111110",
-				"110011010011", "100001101000", "111101110100", "100011011101", "100010110011", "110111011000",
-				"100110010101", "101000100110", "110000110010", "100001011010", "101111001001", "100010101001",
-				"110111111100", "101110011010", "111101010101", "111100001101", "100111010110", "110100100111",
-				"100011100110", "100001011110", "101011010011", "111011001110", "110011100000", "101000011001",
-				"101001011011", "101110001011", "110011111011", "110101000000", "110000101111", "110100101100",
-				"111011110000", "101000111010", "111101111000", "110000100110", "110010100111", "110000001100",
-				"100010000100", "110010100101", "111011101001", "100011110000", "111100011011", "110001101111",
-				"110010101111", "100100000011", "110100100011", "101010110001", "101101110110", "110000010011",
-				"100101110001", "100101000001", "100101101101", "101010001110", "110101100110", "111010111101",
-				"111001000101", "110110000001", "100000101110", "111011110010", "101001010010", "111000101110",
-				"110110000011", "110101101110", "101111101000", "110011100101", "111110110011", "110110010001",
-				"111100000010", "101101101001", "101011011001", "101100110001", "111001101001", "100001101100",
-				"111001000100", "110111001110", "111100111001", "110101010010", "111100011000", "100110100100",
-				"110111101011", "101110001100", "111111101010", "111100010110", "101000110011", "110100010000",
-				"110001101010", "101001000011", "100010000110", "110100111101", "101011100111", "110010001000",
-				"111011111111", "100101001010", "110011100111", "100011100000", "101010011111", "110110110101",
-				"110011001110", "101100111101", "111010100001", "101011110001", "110011110100", "100001000001",
-				"100000011110", "101111101101", "110010010100", "101010101000", "111000001010", "101100001100",
-				"101010000001" };
-		System.out.println(valuesList2.length);
-		for (int ii = 0; ii < valuesList2.length; ii++) {
-			String value2 = valuesList2[ii];
-			char digit2 = value2.charAt(1);
-			int intDigit2 = Integer.parseInt(String.valueOf(digit2));
-			if (intDigit2 == 1) {
-				String valuesList3Vars = value2;
+			if (intDigit1 == 1) {
+				insertVariable1 = insertVariable1 + 1;
+			} else {
+				insertVariable1 = insertVariable1 - 1;
 			}
-		}
-
-				String valuesList3[] = {valuesList3Vars};
-				System.out.println(valuesList3.length);
-				for (int iii = 0; iii < valuesList3.length; iii++) {
-					String value3 = valuesList3[iii];
-					char digit3 = value3.charAt(2);
-					int intDigit3 = Integer.parseInt(String.valueOf(digit3));
-					System.out.println(valuesList3[iii]);
+			if (insertVariable1 >= 0) {
+				if (intDigit1 == 1) {
+					valuesList2.add(value1);
+				}
+			} else {
+				if (intDigit1 == 0) {
+					valuesList2.add(value1);
 				}
 			}
 
-		// System.out.println(insertVar);
+		}
+		System.out.println(valuesList2);
+		System.out.println(valuesList2.size());
 
-		input.close();
+		for (int countingVariable2 = 0; countingVariable2 < valuesList2.size(); countingVariable2++) {
+			String value2 = valuesList2.get(countingVariable2);
+			char digit2 = value2.charAt(1);
+			int intDigit2 = Integer.parseInt(String.valueOf(digit2));
+			if (intDigit2 == 1) {
+				insertVariable2 = insertVariable2 + 1;
+			} else {
+				insertVariable2 = insertVariable2 - 1;
+			}
+			if (insertVariable2 >= 0) {
+				if (intDigit2 == 1) {
+					valuesList3.add(value2);
+				}
+			} else {
+				if (intDigit2 == 0) {
+					valuesList3.add(value2);
+				}
+			}
+
+		}
+		System.out.println(valuesList3);
+		System.out.println(valuesList3.size());
+
+		for (int countingVariable3 = 0; countingVariable3 < valuesList3.size(); countingVariable3++) {
+			String value3 = valuesList3.get(countingVariable3);
+			char digit3 = value3.charAt(2);
+			int intDigit3 = Integer.parseInt(String.valueOf(digit3));
+			if (intDigit3 == 1) {
+				insertVariable3 = insertVariable3 + 1;
+			} else {
+				insertVariable3 = insertVariable3 - 1;
+			}
+			if (intDigit3 == 0) {
+				valuesList4.add(value3);
+			}
+		}
+
+		System.out.println("insert variable 3 " + insertVariable3);
+		System.out.println(valuesList4);
+		System.out.println(valuesList4.size());
+
+		for (int countingVariable4 = 0; countingVariable4 < valuesList4.size(); countingVariable4++) {
+			String value4 = valuesList4.get(countingVariable4);
+			char digit4 = value4.charAt(3);
+			int intDigit4 = Integer.parseInt(String.valueOf(digit4));
+			if (intDigit4 == 1) {
+				insertVariable4 = insertVariable4 + 1;
+			} else {
+				insertVariable4 = insertVariable4 - 1;
+			}
+			if (intDigit4 == 1) {
+				valuesList5.add(value4);
+			}
+
+		}
+
+		System.out.println("insert variable 4 " + insertVariable4);
+		System.out.println(valuesList5);
+		System.out.println(valuesList5.size());
+
+		for (int countingVariable5 = 0; countingVariable5 < valuesList5.size(); countingVariable5++) {
+			String value5 = valuesList5.get(countingVariable5);
+			char digit5 = value5.charAt(4);
+			int intDigit5 = Integer.parseInt(String.valueOf(digit5));
+			if (intDigit5 == 1) {
+				insertVariable5 = insertVariable5 + 1;
+			} else {
+				insertVariable5 = insertVariable5 - 1;
+			}
+			if (intDigit5 == 0) {
+				valuesList6.add(value5);
+			}
+		}
+
+		System.out.println("insert variable 5 " + insertVariable5);
+		System.out.println(valuesList6);
+		System.out.println(valuesList6.size());
+
+		for (int countingVariable6 = 0; countingVariable6 < valuesList6.size(); countingVariable6++) {
+			String value6 = valuesList6.get(countingVariable6);
+			char digit6 = value6.charAt(5);
+			int intDigit6 = Integer.parseInt(String.valueOf(digit6));
+			if (intDigit6 == 1) {
+				insertVariable6 = insertVariable6 + 1;
+			} else {
+				insertVariable6 = insertVariable6 - 1;
+			}
+
+			if (intDigit6 == 1) {
+				valuesList7.add(value6);
+			}
+
+		}
+		System.out.println("insert variable 6 " + insertVariable6);
+		System.out.println(valuesList7);
+		System.out.println(valuesList7.size());
+
+		for (int countingVariable7 = 0; countingVariable7 < valuesList7.size(); countingVariable7++) {
+			String value7 = valuesList7.get(countingVariable7);
+			char digit7 = value7.charAt(6);
+			int intDigit7 = Integer.parseInt(String.valueOf(digit7));
+			if (intDigit7 == 1) {
+				insertVariable7 = insertVariable7 + 1;
+			} else {
+				insertVariable7 = insertVariable7 - 1;
+			}
+			if (intDigit7 == 1) {
+				valuesList8.add(value7);
+			}
+
+		}
+		System.out.println("insert variable 7 " + insertVariable7);
+		System.out.println(valuesList8);
+		System.out.println(valuesList8.size());
+
+		for (int countingVariable8 = 0; countingVariable8 < valuesList8.size(); countingVariable8++) {
+			String value8 = valuesList8.get(countingVariable8);
+			char digit8 = value8.charAt(7);
+			int intDigit8 = Integer.parseInt(String.valueOf(digit8));
+			if (intDigit8 == 1) {
+				insertVariable8 = insertVariable8 + 1;
+			} else {
+				insertVariable8 = insertVariable8 - 1;
+			}
+
+			if (intDigit8 == 0) {
+				valuesList9.add(value8);
+			}
+
+		}
+		System.out.println("insert variable 8 " + insertVariable8);
+		System.out.println(valuesList9);
+		System.out.println(valuesList9.size());
+
+		for (int countingVariable9 = 0; countingVariable9 < valuesList9.size(); countingVariable9++) {
+			String value9 = valuesList9.get(countingVariable9);
+			char digit9 = value9.charAt(8);
+			int intDigit9 = Integer.parseInt(String.valueOf(digit9));
+			if (intDigit9 == 1) {
+				insertVariable9 = insertVariable9 + 1;
+			} else {
+				insertVariable9 = insertVariable9 - 1;
+			}
+				if (intDigit9 == 1) {
+					valuesList10.add(value9);
+				}
+
+		}
+		System.out.println("insert variable 9 " + insertVariable9);
+		System.out.println(valuesList10);
+		System.out.println(valuesList10.size());
+
+		for (int countingVariable10 = 0; countingVariable10 < valuesList10.size(); countingVariable10++) {
+			String value10 = valuesList10.get(countingVariable10);
+			char digit10 = value10.charAt(9);
+			int intDigit10 = Integer.parseInt(String.valueOf(digit10));
+			if (intDigit10 == 1) {
+				insertVariable10 = insertVariable10 + 1;
+			} else {
+				insertVariable10 = insertVariable10 - 1;
+			}
+				if (intDigit10 == 1) {
+					valuesList11.add(value10);
+				}
+
+		}
+		System.out.println("insert variable 10 " + insertVariable10);
+		System.out.println(valuesList11);
+		System.out.println(valuesList11.size());
+
+		for (int countingVariable11 = 0; countingVariable11 < valuesList11.size(); countingVariable11++) {
+			String value11 = valuesList11.get(countingVariable11);
+			char digit11 = value11.charAt(10);
+			int intDigit11 = Integer.parseInt(String.valueOf(digit11));
+			if (intDigit11 == 1) {
+				insertVariable11 = insertVariable11 + 1;
+			} else {
+				insertVariable11 = insertVariable11 - 1;
+			}
+
+				if (intDigit11 == 1) {
+					valuesList12.add(value11);
+				}
+
+		}
+		System.out.println("insert variable 11 " + insertVariable11);
+		System.out.println(valuesList12);
+		System.out.println(valuesList12.size());
+		String OGRString = valuesList12.get(0);
+		System.out.println(OGRString);
+		int OxygenGeneratorRating = Integer.parseInt(OGRString, 2);
+		System.out.println(OxygenGeneratorRating);
 	}
-}
 
+}
