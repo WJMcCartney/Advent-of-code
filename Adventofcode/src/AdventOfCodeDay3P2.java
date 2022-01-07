@@ -1,26 +1,11 @@
 import java.util.Scanner;
 
-public class AdventOfCodeDay3 {
+public class AdventOfCodeDay3P2 {
 
 	public static void main(String[] args) {
-		int gamma1 = 0;
-		int gamma2 = 0;
-		int gamma3 = 0;
-		int gamma4 = 0;
-		int gamma5 = 0;
-		int gamma6 = 0;
-		int gamma7 = 0;
-		int gamma8 = 0;
-		int gamma9 = 0;
-		int gamma10 = 0;
-		int gamma11 = 0;
-		int gamma12 = 0;
-		int gammaFHalf = 0;
-		int gammaSHalf = 0;
-		int epsilonFHalf = 0;
-		int epsilonSHalf = 0;
 		Scanner input = new Scanner(System.in);
-		String[] valuesList = { "110001010110", "011101111101", "111011110101", "011110101000", "100100011001",
+		int insertVar = 0;
+		String[] valuesList1 = { "110001010110", "011101111101", "111011110101", "011110101000", "100100011001",
 				"011001001110", "101011000101", "110000111111", "110110101000", "010101101000", "001101001101",
 				"111000001011", "111000011010", "001111001000", "100110001111", "111100110100", "100000010101",
 				"001110100000", "100111110110", "100110000110", "111100101101", "100101010100", "011100010011",
@@ -149,164 +134,37 @@ public class AdventOfCodeDay3 {
 				"011110000010", "110011110100", "100001000001", "100000011110", "001101100101", "101111101101",
 				"110010010100", "010111101110", "010101110111", "101010101000", "000100000010", "111000001010",
 				"101100001100", "101010000001" };
-		for (int i = 0; i < valuesList.length; i++) {
-			String value = valuesList[i];
-			char digit1 = value.charAt(0);
+		for (int i = 0; i < valuesList1.length; i++) {
+			String value1 = valuesList1[i];
+			char digit1 = value1.charAt(0);
 			int intDigit1 = Integer.parseInt(String.valueOf(digit1));
 			if (intDigit1 == 1) {
-				gamma1 = gamma1 + 1;
-			} else {
-				gamma1 = gamma1 - 1;
+				String valuesList2[] = { value1 };
+				System.out.println(valuesList2.length);
+				for (int ii = 0; ii < valuesList2.length; ii++) {
+					String value2 = valuesList2[ii];
+					char digit2 = value2.charAt(1);
+					int intDigit2 = Integer.parseInt(String.valueOf(digit2));
+					if (intDigit2 == 1) {
+						String valuesList3[] = { value2 };
+						for (int iii = 0; iii < valuesList3.length; iii++) {
+							String value3 = valuesList3[iii];
+							char digit3 = value2.charAt(2);
+							int intDigit3 = Integer.parseInt(String.valueOf(digit3));
+							if (intDigit3 == 1) {
+								insertVar = insertVar + 1;
+							} else {
+								insertVar = insertVar - 1;
+							}
+							// System.out.println(insertVar);
+							// System.out.println(valuesList3.length);
+							// System.out.print(valuesList3);
+						}
+					}
+
+					input.close();
+				}
 			}
-			char digit2 = value.charAt(1);
-			int intDigit2 = Integer.parseInt(String.valueOf(digit2));
-			if (intDigit2 == 1) {
-				gamma2 = gamma2 + 1;
-			} else {
-				gamma2 = gamma2 - 1;
-			}
-			char digit3 = value.charAt(2);
-			int intDigit3 = Integer.parseInt(String.valueOf(digit3));
-			if (intDigit3 == 1) {
-				gamma3 = gamma3 + 1;
-			} else {
-				gamma3 = gamma3 - 1;
-			}
-			char digit4 = value.charAt(3);
-			int intDigit4 = Integer.parseInt(String.valueOf(digit4));
-			if (intDigit4 == 1) {
-				gamma4 = gamma4 + 1;
-			} else {
-				gamma4 = gamma4 - 1;
-			}
-			char digit5 = value.charAt(4);
-			int intDigit5 = Integer.parseInt(String.valueOf(digit5));
-			if (intDigit5 == 1) {
-				gamma5 = gamma5 + 1;
-			} else {
-				gamma5 = gamma5 - 1;
-			}
-			char digit6 = value.charAt(5);
-			int intDigit6 = Integer.parseInt(String.valueOf(digit6));
-			if (intDigit6 == 1) {
-				gamma6 = gamma6 + 1;
-			} else {
-				gamma6 = gamma6 - 1;
-			}
-			char digit7 = value.charAt(6);
-			int intDigit7 = Integer.parseInt(String.valueOf(digit7));
-			if (intDigit7 == 1) {
-				gamma7 = gamma7 + 1;
-			} else {
-				gamma7 = gamma7 - 1;
-			}
-			char digit8 = value.charAt(7);
-			int intDigit8 = Integer.parseInt(String.valueOf(digit8));
-			if (intDigit8 == 1) {
-				gamma8 = gamma8 + 1;
-			} else {
-				gamma8 = gamma8 - 1;
-			}
-			char digit9 = value.charAt(8);
-			int intDigit9 = Integer.parseInt(String.valueOf(digit9));
-			if (intDigit9 == 1) {
-				gamma9 = gamma9 + 1;
-			} else {
-				gamma9 = gamma9 - 1;
-			}
-			char digit10 = value.charAt(9);
-			int intDigit10 = Integer.parseInt(String.valueOf(digit10));
-			if (intDigit10 == 1) {
-				gamma10 = gamma10 + 1;
-			} else {
-				gamma10 = gamma10 - 1;
-			}
-			char digit11 = value.charAt(10);
-			int intDigit11 = Integer.parseInt(String.valueOf(digit11));
-			if (intDigit11 == 1) {
-				gamma11 = gamma11 + 1;
-			} else {
-				gamma11 = gamma11 - 1;
-			}
-			char digit12 = value.charAt(11);
-			int intDigit12 = Integer.parseInt(String.valueOf(digit12));
-			if (intDigit12 == 1) {
-				gamma12 = gamma12 + 1;
-			} else {
-				gamma12 = gamma12 - 1;
-			}
-			System.out.println(intDigit1);
 		}
-		if (gamma1 > 0) {
-			gammaFHalf = gammaFHalf + 100000;
-		} else {
-			epsilonFHalf = epsilonFHalf + 100000;
-		}
-		if (gamma2 > 0) {
-			gammaFHalf = gammaFHalf + 10000;
-		} else {
-			epsilonFHalf = epsilonFHalf + 10000;
-		}
-		if (gamma3 > 0) {
-			gammaFHalf = gammaFHalf + 1000;
-		} else {
-			epsilonFHalf = epsilonFHalf + 1000;
-		}
-		if (gamma4 > 0) {
-			gammaFHalf = gammaFHalf + 100;
-		} else {
-			epsilonFHalf = epsilonFHalf + 100;
-		}
-		if (gamma5 > 0) {
-			gammaFHalf = gammaFHalf + 10;
-		} else {
-			epsilonFHalf = epsilonFHalf + 10;
-		}
-		if (gamma6 > 0) {
-			gammaFHalf = gammaFHalf + 1;
-		} else {
-			epsilonFHalf = epsilonFHalf + 1;
-		}
-		if (gamma7 > 0) {
-			gammaSHalf = gammaSHalf + 100000;
-		} else {
-			epsilonSHalf = epsilonSHalf + 100000;
-		}
-		if (gamma8 > 0) {
-			gammaSHalf = gammaSHalf + 10000;
-		} else {
-			epsilonSHalf = epsilonSHalf + 10000;
-		}
-		if (gamma9 > 0) {
-			gammaSHalf = gammaSHalf + 1000;
-		} else {
-			epsilonSHalf = epsilonSHalf + 1000;
-		}
-		if (gamma10 > 0) {
-			gammaSHalf = gammaSHalf + 100;
-		} else {
-			epsilonSHalf = epsilonSHalf + 100;
-		}
-		if (gamma11 > 0) {
-			gammaSHalf = gammaSHalf + 10;
-		} else {
-			epsilonSHalf = epsilonSHalf + 10;
-		}
-		if (gamma12 > 0) {
-			gammaSHalf = gammaSHalf + 1;
-		} else {
-			epsilonSHalf = epsilonSHalf + 1;
-		}
-		String gammaFHalfString = Integer.toString(gammaFHalf);
-		String gammaSHalfString = Integer.toString(gammaSHalf);
-		String epsilonFHalfString = Integer.toString(epsilonFHalf);
-		String epsilonSHalfString = Integer.toString(epsilonSHalf);
-		String gammaString = gammaFHalfString + gammaSHalfString;
-		String epsilonString = "00" + epsilonFHalfString + "0000" + epsilonSHalfString;
-		int gamma = Integer.parseInt(gammaString, 2);
-		int epsilon = Integer.parseInt(epsilonString, 2);
-		int power = gamma * epsilon;
-		System.out.println("You are outputting " + power + " power");
-		input.close();
 	}
 }
