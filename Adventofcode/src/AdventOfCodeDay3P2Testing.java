@@ -16,7 +16,18 @@ public class AdventOfCodeDay3P2Testing {
 		int insertVariable9 = 0;
 		int insertVariable10 = 0;
 		int insertVariable11 = 0;
-		int insertVariable12 = 0;
+		int insertVariable1p = 0;
+		int insertVariable2p = 0;
+		int insertVariable3p = 0;
+		int insertVariable4p = 0;
+		int insertVariable5p = 0;
+		int insertVariable6p = 0;
+		int insertVariable7p = 0;
+		int insertVariable8p = 0;
+		int insertVariable9p = 0;
+		int insertVariable10p = 0;
+		int insertVariable11p = 0;
+		int insertVariable12p = 0;
 
 		ArrayList<String> valuesList2 = new ArrayList<String>();
 		ArrayList<String> valuesList3 = new ArrayList<String>();
@@ -166,19 +177,15 @@ public class AdventOfCodeDay3P2Testing {
 			if (intDigit1 == 1) {
 				insertVariable1 = insertVariable1 + 1;
 			} else {
-				insertVariable1 = insertVariable1 - 1;
+				insertVariable1p = insertVariable1p + 1;
 			}
-			if (insertVariable1 >= 0) {
-				if (intDigit1 == 1) {
-					valuesList2.add(value1);
-				}
-			} else {
-				if (intDigit1 == 0) {
-					valuesList2.add(value1);
-				}
+
+			if (intDigit1 == 1) {
+				valuesList2.add(value1);
 			}
 
 		}
+		System.out.println("insert variable 1: " + insertVariable1 + "(1)    " + insertVariable1p + "(0)");
 		System.out.println(valuesList2);
 		System.out.println(valuesList2.size());
 
@@ -189,7 +196,7 @@ public class AdventOfCodeDay3P2Testing {
 			if (intDigit2 == 1) {
 				insertVariable2 = insertVariable2 + 1;
 			} else {
-				insertVariable2 = insertVariable2 - 1;
+				insertVariable2p = insertVariable2p + 1;
 			}
 			if (insertVariable2 >= 0) {
 				if (intDigit2 == 1) {
@@ -202,6 +209,7 @@ public class AdventOfCodeDay3P2Testing {
 			}
 
 		}
+		System.out.println("insert variable 2: " + insertVariable2 + "(1)    " + insertVariable2p + "(0)");
 		System.out.println(valuesList3);
 		System.out.println(valuesList3.size());
 
@@ -212,14 +220,14 @@ public class AdventOfCodeDay3P2Testing {
 			if (intDigit3 == 1) {
 				insertVariable3 = insertVariable3 + 1;
 			} else {
-				insertVariable3 = insertVariable3 - 1;
+				insertVariable3p = insertVariable3p + 1;
 			}
 			if (intDigit3 == 0) {
 				valuesList4.add(value3);
 			}
 		}
 
-		System.out.println("insert variable 3 " + insertVariable3);
+		System.out.println("insert variable 3: " + insertVariable3 + "(1)    " + insertVariable3p + "(0)");
 		System.out.println(valuesList4);
 		System.out.println(valuesList4.size());
 
@@ -230,7 +238,7 @@ public class AdventOfCodeDay3P2Testing {
 			if (intDigit4 == 1) {
 				insertVariable4 = insertVariable4 + 1;
 			} else {
-				insertVariable4 = insertVariable4 - 1;
+				insertVariable4p = insertVariable4p + 1;
 			}
 			if (intDigit4 == 1) {
 				valuesList5.add(value4);
@@ -238,7 +246,7 @@ public class AdventOfCodeDay3P2Testing {
 
 		}
 
-		System.out.println("insert variable 4 " + insertVariable4);
+		System.out.println("insert variable 4: " + insertVariable4 + "(1)    " + insertVariable4p + "(0)");
 		System.out.println(valuesList5);
 		System.out.println(valuesList5.size());
 
@@ -249,14 +257,14 @@ public class AdventOfCodeDay3P2Testing {
 			if (intDigit5 == 1) {
 				insertVariable5 = insertVariable5 + 1;
 			} else {
-				insertVariable5 = insertVariable5 - 1;
+				insertVariable5p = insertVariable5p + 1;
 			}
 			if (intDigit5 == 0) {
 				valuesList6.add(value5);
 			}
 		}
 
-		System.out.println("insert variable 5 " + insertVariable5);
+		System.out.println("insert variable 5: " + insertVariable5 + "(1)    " + insertVariable5p + "(0)");
 		System.out.println(valuesList6);
 		System.out.println(valuesList6.size());
 
@@ -267,7 +275,7 @@ public class AdventOfCodeDay3P2Testing {
 			if (intDigit6 == 1) {
 				insertVariable6 = insertVariable6 + 1;
 			} else {
-				insertVariable6 = insertVariable6 - 1;
+				insertVariable6p = insertVariable6p + 1;
 			}
 
 			if (intDigit6 == 1) {
@@ -275,7 +283,7 @@ public class AdventOfCodeDay3P2Testing {
 			}
 
 		}
-		System.out.println("insert variable 6 " + insertVariable6);
+		System.out.println("insert variable 6: " + insertVariable6 + "(1)    " + insertVariable6p + "(0)");
 		System.out.println(valuesList7);
 		System.out.println(valuesList7.size());
 
@@ -286,14 +294,14 @@ public class AdventOfCodeDay3P2Testing {
 			if (intDigit7 == 1) {
 				insertVariable7 = insertVariable7 + 1;
 			} else {
-				insertVariable7 = insertVariable7 - 1;
+				insertVariable7p = insertVariable7p + 1;
 			}
 			if (intDigit7 == 1) {
 				valuesList8.add(value7);
 			}
 
 		}
-		System.out.println("insert variable 7 " + insertVariable7);
+		System.out.println("insert variable 7: " + insertVariable7 + "(1)    " + insertVariable7p + "(0)");
 		System.out.println(valuesList8);
 		System.out.println(valuesList8.size());
 
@@ -304,15 +312,14 @@ public class AdventOfCodeDay3P2Testing {
 			if (intDigit8 == 1) {
 				insertVariable8 = insertVariable8 + 1;
 			} else {
-				insertVariable8 = insertVariable8 - 1;
+				insertVariable8p = insertVariable8p + 1;
 			}
-
 			if (intDigit8 == 0) {
 				valuesList9.add(value8);
 			}
 
 		}
-		System.out.println("insert variable 8 " + insertVariable8);
+		System.out.println("insert variable 8: " + insertVariable8 + "(1)    " + insertVariable8p + "(0)");
 		System.out.println(valuesList9);
 		System.out.println(valuesList9.size());
 
@@ -323,14 +330,14 @@ public class AdventOfCodeDay3P2Testing {
 			if (intDigit9 == 1) {
 				insertVariable9 = insertVariable9 + 1;
 			} else {
-				insertVariable9 = insertVariable9 - 1;
+				insertVariable9p = insertVariable9p + 1;
 			}
 				if (intDigit9 == 1) {
 					valuesList10.add(value9);
 				}
 
 		}
-		System.out.println("insert variable 9 " + insertVariable9);
+		System.out.println("insert variable 9 " + insertVariable9 + "(1)    " + insertVariable9p + "(0)");
 		System.out.println(valuesList10);
 		System.out.println(valuesList10.size());
 
@@ -341,14 +348,14 @@ public class AdventOfCodeDay3P2Testing {
 			if (intDigit10 == 1) {
 				insertVariable10 = insertVariable10 + 1;
 			} else {
-				insertVariable10 = insertVariable10 - 1;
+				insertVariable10p = insertVariable10p + 1;
 			}
 				if (intDigit10 == 1) {
 					valuesList11.add(value10);
 				}
 
 		}
-		System.out.println("insert variable 10 " + insertVariable10);
+		System.out.println("insert variable 10 " + insertVariable10 + "(1)    " + insertVariable10p + "(0)");
 		System.out.println(valuesList11);
 		System.out.println(valuesList11.size());
 
@@ -359,7 +366,7 @@ public class AdventOfCodeDay3P2Testing {
 			if (intDigit11 == 1) {
 				insertVariable11 = insertVariable11 + 1;
 			} else {
-				insertVariable11 = insertVariable11 - 1;
+				insertVariable11p = insertVariable11p + 1;
 			}
 
 				if (intDigit11 == 1) {
@@ -367,7 +374,7 @@ public class AdventOfCodeDay3P2Testing {
 				}
 
 		}
-		System.out.println("insert variable 11 " + insertVariable11);
+		System.out.println("insert variable 11 " + insertVariable11 + "(1)    " + insertVariable11p + "(0)");
 		System.out.println(valuesList12);
 		System.out.println(valuesList12.size());
 		String OGRString = valuesList12.get(0);
