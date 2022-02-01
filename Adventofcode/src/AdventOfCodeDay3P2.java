@@ -6,8 +6,8 @@ public class AdventOfCodeDay3P2 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		int oneBit = 0;
-		int zeroBit = 0;
+		int oneBit = 1;
+		int zeroBit = 1;
 		int intDigit;
 		String currentElement;
 
@@ -215,39 +215,49 @@ public class AdventOfCodeDay3P2 {
 			String value = valuesList1[i];
 			currentValuesList.add(value);
 		}
-		System.out.println(currentValuesList);
-		for (int characterIndex = 0; characterIndex < 4; characterIndex++) {
-			for (int i = 0; i < currentValuesList.size(); i++) {
-				currentElement = currentValuesList.get(i);
-				char digit = currentElement.charAt(characterIndex);
-				intDigit = Integer.parseInt(String.valueOf(digit));
-				if (intDigit == 1) {
-					oneBit = oneBit + 1;
-				} else {
-					zeroBit = zeroBit + 1;
-				}
-			}
-			System.out.println(oneBit + "(1) " + zeroBit + "(0)");
-			for (int i = 0; i < currentValuesList.size(); i++) {
-				currentElement = currentValuesList.get(i);
-				char digit = currentElement.charAt(characterIndex);
-				intDigit = Integer.parseInt(String.valueOf(digit));
-				if (oneBit < zeroBit) {
+		System.out.println(currentValuesList + "start");
+		while (zeroBit != 0 && oneBit != 0) {
+			oneBit = 0;
+			zeroBit = 0;
+			for (int characterIndex = 0; characterIndex < 4; characterIndex++) {
+				oneBit = 0;
+				zeroBit = 0;
+				for (int i = 0; i < currentValuesList.size(); i++) {
+					currentElement = currentValuesList.get(i);
+					char digit = currentElement.charAt(characterIndex);
+					intDigit = Integer.parseInt(String.valueOf(digit));
 					if (intDigit == 1) {
-						nextValuesList.add(currentElement);
-					}
-				} else {
-					if (intDigit == 0) {
-						nextValuesList.add(currentElement);
+						oneBit = oneBit + 1;
+					} else {
+						zeroBit = zeroBit + 1;
 					}
 				}
+				System.out.println(oneBit + "(1) " + zeroBit + "(0)");
+				nextValuesList.removeAll(nextValuesList);
+				for (int i = 0; i < currentValuesList.size(); i++) {
+					currentElement = currentValuesList.get(i);
+					System.out.println(currentElement);
+					char digit = currentElement.charAt(characterIndex);
+					intDigit = Integer.parseInt(String.valueOf(digit));
+					if (oneBit < zeroBit) {
+						if (intDigit == 1) {
+							nextValuesList.add(currentElement);
+							System.out.println(nextValuesList + "added 1");
+						} 
+					} else {
+						if (intDigit == 0) {
+							nextValuesList.add(currentElement);
+							System.out.println(nextValuesList + "added 0");
+						}
+					}
+				}
+
 			}
 			System.out.println(nextValuesList);
 			currentValuesList = nextValuesList;
+			System.out.println(currentValuesList + "ending");
 		}
-		System.out.println(currentValuesList);
-		System.out.println(currentValuesList.size());
-
+		System.out.println(currentValuesList + "finish");
 		/*
 		 * System.out.println(CO2String); int CO2Rating = Integer.parseInt(CO2String,
 		 * 2); System.out.println(CO2Rating);
